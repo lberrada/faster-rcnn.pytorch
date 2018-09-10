@@ -6,6 +6,7 @@ export CUDA_PATH=/usr/local/cuda/
 #You may also want to ad the following
 #export C_INCLUDE_PATH=/opt/cuda/include
 
+alias nvcc=/usr/local/cuda/bin/nvcc
 export CXXFLAGS="-std=c++11"
 export CFLAGS="-std=c99"
 
