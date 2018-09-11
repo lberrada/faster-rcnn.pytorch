@@ -216,6 +216,8 @@ if __name__ == '__main__':
   dataloader = torch.utils.data.DataLoader(dataset, batch_size=1,
                             shuffle=False, num_workers=0,
                             pin_memory=True)
+  print(len(dataset))
+  exit()
 
   data_iter = iter(dataloader)
 
@@ -281,7 +283,7 @@ if __name__ == '__main__':
               cls_boxes = pred_boxes[inds, :]
             else:
               cls_boxes = pred_boxes[inds][:, j * 4:(j + 1) * 4]
-            
+
             cls_dets = torch.cat((cls_boxes, cls_scores.unsqueeze(1)), 1)
             # cls_dets = torch.cat((cls_boxes, cls_scores), 1)
             cls_dets = cls_dets[order]

@@ -13,3 +13,6 @@ add_path(lib_path)
 
 coco_path = osp.join(this_dir, 'data', 'coco', 'PythonAPI')
 add_path(coco_path)
+
+dfw_path = '../optim'
+add_path(dfw_path)
